@@ -98,11 +98,11 @@ def read_ply_file(folder_specified=None):
     # 6/3
     # temp_min, temp_max = 175, 600.0   #  12:17
     # temp_min, temp_max = 175, 500.0   #  12:22
-    # temp_min, temp_max = 175, 450.0   #  12:25
+    temp_min, temp_max = 175, 450.0   #  12:25
     # temp_min, temp_max = 10, 175.0    #  12:39
     # temp_min, temp_max = 40, 175.0    #  12:43
     # temp_min, temp_max = 175, 600.0    #  15:40 uke gammel
-    # temp_min, temp_max = 175, 500.0      #  15:50 
+    # temp_min, temp_max = 40, 500.0      #  15:50 
 
     # # 7/3
     # temp_min, temp_max = 51, 500.0      #  12:14
@@ -115,9 +115,7 @@ def read_ply_file(folder_specified=None):
     # temp_min, temp_max = 20, 175.0      #  12:41
 
     # 9/3
-   # temp_min, temp_max = 175, 450.0      #  12:41
-    temp_min, temp_max = 10.0, 40.0      
-   
+    # temp_min, temp_max = 20, 40.0      #  12:41
     temperatures = temp_min + (temperature_data * (temp_max - temp_min))
 
     # Print some statistics
@@ -137,7 +135,7 @@ def plot_interactive_temperature_heatmap(points, temperatures):
     fig, ax = plt.subplots(figsize=(6, 5))
     scatter = ax.scatter(points[:, 0], points[:, 1], c=temperatures, cmap="jet", s=5)
     cbar = plt.colorbar(scatter)
-    cbar.set_label('Temperature [°C]', rotation=270, labelpad=15)
+    cbar.set_label('Temperature (°C)', rotation=270, labelpad=15)
     ax.set_xlabel("X Coordinate")
     ax.set_ylabel("Y Coordinate")
     ax.set_title("Temperature Distribution in Point Cloud")
@@ -178,7 +176,6 @@ def visualize_point_cloud_with_temperature(pcd, temperatures):
 
     # Visualize the point cloud
     o3d.visualization.draw_geometries([pcd], window_name="3D Thermal Point Cloud")
-    
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process a specified timestamped folder inside takenImages.")
     parser.add_argument(
