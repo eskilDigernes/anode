@@ -1,8 +1,7 @@
 {
     "python.testing.unittestArgs": [
         "-v",
-        "-s",
-        ".",
+        "-s        ".",
         "-p",
         "*test*.py"
     ],
