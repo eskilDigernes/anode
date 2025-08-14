@@ -177,7 +177,7 @@ def visualize_point_cloud_with_temperature(pcd, temperatures):
     # Visualize the point cloud
     o3d.visualization.draw_geometries([pcd], window_name="3D Thermal Point Cloud")
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Process a specified timestamped folder inside taken_images.")
+    parser = argparse.ArgumentParser(description="Process a specified timestamped folder inside takenImages.")
     parser.add_argument(
         "--folder",
         type=str,
