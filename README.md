@@ -4,9 +4,7 @@ In your project directory, run:
 python -m venv .venv
 
 
-2. Activate the Virtual Environment.
-Then, activate it by running:
-
+2. Activate the Virtual Environment. Then, activate it by running:
 .\.venv\Scripts\Activate.ps1
 
 
