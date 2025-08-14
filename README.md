@@ -8,13 +8,10 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
 
-3. Install Dependencies
-With the virtual environment active, install required dependencies:
-
-
-
-
 Your .venv folder is already excluded in your .gitignore. After these steps, you can run your script with:
+
 3. pip install open3d matplotlib numpy
+
+
 4. & .\.venv\Scripts\python.exe plot_temperature.py
 
